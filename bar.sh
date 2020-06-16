@@ -1,11 +1,11 @@
 #!/bin/bash
 while :
 do
-statusbat=|
 
 
 
-if [-r /sys/class/power_supply/BAT0/capacity]
+
+if test -r /sys/class/power_supply/BAT0/capacity;
 then
     for battery in /sys/class/power_supply/BAT?
     do
@@ -19,10 +19,10 @@ fi
 
 
 
-status= "$(echo $statusbat)" "$( date +"%F %R" )"
+status=$statusbat"$(date +"%F %R" )"
 
 
 
-    xsetroot -name "$(echo $status | tr "/n" " ")"
-    sleep 1m
+   xsetroot -name "$(echo $status | tr "/n" " ")"
+    sleep 30s
 done

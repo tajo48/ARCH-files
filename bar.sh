@@ -1,7 +1,7 @@
 #!/bin/bash
 while :
 do
-
+statusbat=" "
 
 
 
@@ -12,17 +12,17 @@ then
     capacity=$(cat "$battery"/capacity) || break
     bstatus=$(sed "s/[Dd]ischarging/-/;s/[Nn]ot charging/NO/;s/[Cc]harging/+/;s/[Uu]nknown/NULL/;s/[Ff]ull/F/" "$battery"/status)
 
-statusbat=$statusbat$capacity$bstatus
+statusbat=$statusbat$capacity$bstatus" "
 done
 fi
 
 
 
 
-status=$statusbat"$(date +"%F %R" )"
+status=$statusbat"$(date +"%F %R" )"" ""$(pacman -Qu | wc -l)"
 
 
 
    xsetroot -name "$(echo $status | tr "/n" " ")"
-    sleep 30s
+    sleep 5s
 done

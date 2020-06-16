@@ -17,12 +17,12 @@ done
 fi
 
 
-
+sudo pacman -Sy
 
 status=$statusbat"$(date +"%F %R" )"" ""$(pacman -Qu | wc -l)"
 
 
 
    xsetroot -name "$(echo $status | tr "/n" " ")"
-    sleep 5s
+    sleep 20s
 done

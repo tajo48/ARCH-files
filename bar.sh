@@ -12,14 +12,14 @@ then
     capacity=$(cat "$battery"/capacity) || break
     bstatus=$(sed "s/[Dd]ischarging/-/;s/[Nn]ot charging/NO/;s/[Cc]harging/+/;s/[Uu]nknown/NULL/;s/[Ff]ull/F/" "$battery"/status)
 
-statusbat="|"$capacity$bstatus" "$statusbat
+statusbat="|"$capacity$bstatus$statusbat
 done
 fi
 
 
 sudo pacman -Sy 
 
-status=$statusbat"$(date +"%F %R" )"" |""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
+status=$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
 
 
 

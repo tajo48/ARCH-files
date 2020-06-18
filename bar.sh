@@ -19,7 +19,7 @@ fi
 
 sudo pacman -Sy 
 
-status=$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
+status=$statusbat"$(date +"%F %R" )"" |""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
 
 
 

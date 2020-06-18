@@ -12,7 +12,7 @@ then
     capacity=$(cat "$battery"/capacity) || break
     bstatus=$(sed "s/[Dd]ischarging/-/;s/[Nn]ot charging/NO/;s/[Cc]harging/+/;s/[Uu]nknown/NULL/;s/[Ff]ull/F/" "$battery"/status)
 
-statusbat=$statusbat$capacity$bstatus" "
+statusbat="|"$capacity$bstatus" "$statusbat
 done
 fi
 

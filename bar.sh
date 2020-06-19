@@ -22,5 +22,5 @@ status=$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q
 
 
    xsetroot -name "$(echo $status | tr "/n" " ")"
-    sleep 5s
+    sleep 10s
 done

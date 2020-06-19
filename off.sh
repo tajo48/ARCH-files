@@ -1,7 +1,7 @@
 #!/bin/bash
 #[ $(echo -e "No\nYes" | dmenu -i) == "Yes" ] && echo "xd
 
-options="poweroff\nxstop\nreboot\nupdate"
+options="poweroff\nxstop\nreboot\nupdate\nupdatelist"
 
 chosen=$(echo -e "$options" | dmenu -i)
 
@@ -10,4 +10,5 @@ case "$chosen" in
   poweroff) sudo poweroff;;
   reboot) sudo reboot;;
   update) sudo pacman -Suy --noconfirm  
+  updatelist) sudo pacman -Qu | dmenu -i
 esac

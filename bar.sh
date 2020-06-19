@@ -1,4 +1,5 @@
 #!/bin/bash
+sh /home/tajo48/ARCH-files/20min.sh
 while :
 do
 statusbat="|"
@@ -16,13 +17,10 @@ statusbat="|"$capacity$bstatus$statusbat
 done
 fi
 
-
-sudo pacman -Sy 
-
 status=$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
 
 
 
    xsetroot -name "$(echo $status | tr "/n" " ")"
-    sleep 10s
+    sleep 5s
 done

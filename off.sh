@@ -6,7 +6,7 @@ options="Poweroff\nXstop\nReboot\nUpdate\nPacman\nUinstall"
 chosen=$(echo -e "$options" | dmenu -i)
 
 case "$chosen" in
-  Xstop) sudo kill -9 $(pgrep -f bar.sh) && sudo killall dwm;;
+  Xstop) sudo kill -9 $(pgrep -f bar.sh) && sudo kill -9 $(pgrep -f 20min.sh) &&  sudo killall dwm;;
   Poweroff) sudo poweroff;;
   Reboot) sudo reboot;;
   Update) sudo pacman -Suy --noconfirm  ;;

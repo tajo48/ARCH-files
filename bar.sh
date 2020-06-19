@@ -1,5 +1,5 @@
 #!/bin/bash
-sh /home/tajo48/ARCH-files/20min.sh
+sh /home/tajo48/ARCH-files/20min.sh &
 while :
 do
 statusbat="|"

@@ -3,5 +3,5 @@ while :
 do
 
 sudo pacman -Sy 
-sleep 5s
+sleep 20m
 done

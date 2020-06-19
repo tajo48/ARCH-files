@@ -9,6 +9,6 @@ case "$chosen" in
   xstop) sudo kill -9 $(pgrep -f bar.sh) && sudo killall dwm;;
   poweroff) sudo poweroff;;
   reboot) sudo reboot;;
-  update) sudo pacman -Suy --noconfirm  
-  updatelist) sudo pacman -Qu | dmenu -i
+  update) sudo pacman -Suy --noconfirm  ;;
+  updatelist) sudo pacman -Qu | dmenu -i ;;
 esac

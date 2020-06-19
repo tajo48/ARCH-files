@@ -10,5 +10,6 @@ case "$chosen" in
   poweroff) sudo poweroff;;
   reboot) sudo reboot;;
   update) sudo pacman -Suy --noconfirm  ;;
-  updatelist) chosen=$(sudo pacman -Qu | dmenu -i);;
+  updatelist) chosen=$(sudo pacman -Qu | dmenu -i) && sudo pacman -Su --noconfirm $chosen ;;
+
 esac

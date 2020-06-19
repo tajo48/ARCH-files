@@ -1,7 +1,7 @@
 #!/bin/bash
 #[ $(echo -e "No\nYes" | dmenu -i) == "Yes" ] && echo "xd
 
-options="poweroff\nxstop\nreboot\nupdate\nDDDDDDDDDDDDDD"
+options="poweroff\nxstop\nreboot\nupdate"
 
 chosen=$(echo -e "$options" | dmenu -i)
 

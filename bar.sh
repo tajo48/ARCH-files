@@ -22,7 +22,7 @@ allmem="$(cat /proc/meminfo | grep "MemTotal" | awk '{print $2}')"
 mem="$( calc "$(echo $freemem)" / "$(echo $allmem)" *100 )"
 
 
-status=$mem"% "$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
+status=$mem"%|"$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
 
 
 

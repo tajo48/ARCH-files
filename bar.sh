@@ -17,8 +17,8 @@ statusbat="|"$capacity$bstatus$statusbat
 done
 fi
 
-usedmem="$(vmstat -s | grep "used memory" | awk '{print $1}' | tr "\n" " ")"
-allmem="$(cat /proc/meminfo | grep "MemTotal" | awk '{print $2}')"
+usedmem="$(vmstat -s | grep "used memory" | awk '{print $1}' )"
+allmem="$(vmstat -s | grep "total memory" | awk '{print $1}' )"
 mem="$( calc "$(echo $allmem)" / "$(echo $usedmem)" *100 | tr "~" " " | tr "." " " | awk '{print $1}' )"
 
 

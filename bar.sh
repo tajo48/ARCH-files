@@ -19,7 +19,7 @@ fi
 
 usedmem="$(vmstat -s | grep "used memory" | awk '{print $1}' )"
 allmem="$(vmstat -s | grep "total memory" | awk '{print $1}' )"
-mem="$( calc "$(echo $allmem)" / "$(echo $usedmem)" *100 | tr "~" " " | tr "." " " | awk '{print $1}' )"
+mem="$( calc "$(echo $usedmem)" / "$(echo $allmem)" *100 | tr "~" " " | tr "." " " | awk '{print $1}' )"
 
 
 status=$mem"%"$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"

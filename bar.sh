@@ -19,7 +19,7 @@ fi
 
 freemem="$(cat /proc/meminfo | grep "MemFree" | awk '{print $2}')"
 allmem="$(cat /proc/meminfo | grep "MemTotal" | awk '{print $2}')"
-mem="$( calc "$(echo $freemem)" / "$(echo $allmem)" *100 )"
+mem="$( calc "$(echo $freemem)" / "$(echo $allmem)" *100 | tr "~" " " | tr "." " " | awk '{print $1}' )"
 
 
 status=$mem"%|"$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"

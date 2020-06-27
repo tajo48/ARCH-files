@@ -1,7 +1,5 @@
 #!/bin/bash
-sh /home/tajo48/ARCH-files/20min.sh &
-while :
-do
+
 statusbat="|"
 
 
@@ -24,8 +22,5 @@ mem="$( calc "$(echo $usedmem)" / "$(echo $allmem)" *100 | tr "~" " " | tr "." "
 
 status=$mem"%"$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
 
-
-
 echo $status
-    sleep 10s
-done
+

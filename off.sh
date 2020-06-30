@@ -10,7 +10,7 @@ case "$chosen" in
   Poweroff) sudo poweroff;;
   Reboot) sudo reboot;;
   Update) sudo pacman -Suy --noconfirm  ;;
-  Pacman) update=$(sudo pacman -Qu | awk '{print $1}') && install=$(sudo pacman -Ss | grep "^[A-Za-z]" | tr "/" " " | awk '{ print $2}' | tr "" "\n" ) && chosen=$(echo -e $install"\nProgramy:\n"$update | dmenu -i ) && sudo pacman -S --noconfirm $chosen ;;
+  Pacman) update=$(sudo pacman -Qu | awk '{print $1}' | tr "" "\n") && install=$(sudo pacman -Ss | grep "^[A-Za-z]" | tr "/" " " | awk '{ print $2}' | tr "" "\n" ) && chosen=$(echo -e $install"\nProgramy:\n"$update | dmenu -i ) && sudo pacman -S --noconfirm $chosen ;;
   Uinstall) chosen=$(sudo pacman -Q | awk '{print $1}' | dmenu -i) && sudo pacman -R --noconfirm $chosen ;;
   Gopoweroff) chosen=$(echo -e "10m\n20m\n30m\n1h\n2h\n3h\n8h" | dmenu -i) && sudo sleep $chosen && sudo poweroff ;;
   Offgopoweroff) sudo kill -9 $(pgrep -f off.sh) ;;

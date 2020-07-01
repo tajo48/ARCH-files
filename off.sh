@@ -22,5 +22,5 @@ case "$chosen" in
   Startssh) sudo systemctl start sshd;;
   Disablessh) sudo systemctl disable sshd;;
   Enablessh) sudo systemctl enalbe sshd;;
-  Upgradefiles) sudo sh ARCH-files/upgradefiles.sh
+  Upgradefiles) sudo sh ARCH-files/upgradefiles.sh;;
 esac

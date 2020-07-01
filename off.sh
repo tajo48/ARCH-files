@@ -5,7 +5,7 @@ options="Operation\nPacman\nSsh"
 chosen=$(echo -e "$options" | dmenu -i)
 
 case "$chosen" in
-  Operation) options="Poweroff\nXstop\nRefbar" && chosen=$(echo -e "$options" | dmenu -i);;
+  Operation) options="Poweroff\nXstop\nRefbar\nUpgradefiles" && chosen=$(echo -e "$options" | dmenu -i);;
   Pacman) options="Update\nPacman\nUinstall" && chosen=$(echo -e "$options" | dmenu -i);;
   Ssh) options="Killssh\nStartssh\nDisablessh\nEnablessh" && chosen=$(echo -e "$options" | dmenu -i);;
 esac
@@ -22,4 +22,5 @@ case "$chosen" in
   Startssh) sudo systemctl start sshd;;
   Disablessh) sudo systemctl disable sshd;;
   Enablessh) sudo systemctl enalbe sshd;;
+  Upgradefiles) sudo sh ARCH-files/upgradefiles.sh
 esac

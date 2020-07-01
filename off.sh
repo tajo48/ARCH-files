@@ -4,6 +4,8 @@
 options="Poweroff\nXstop\nReboot\nUpdate\nPacman\nUinstall\nRefbar\nGopoweroff\nOffgopoweroff"
 
 chosen=$(echo -e "$options" | dmenu -i)
+asd=nope
+zxc=nope
 
 case "$chosen" in
   Xstop) sudo kill -9 $(pgrep -f bar.sh) && sudo kill -9 $(pgrep -f 20min.sh) &&  sudo killall dwm;;
@@ -15,4 +17,13 @@ case "$chosen" in
   Gopoweroff) chosen=$(echo -e "10m\n20m\n30m\n1h\n2h\n3h\n8h" | dmenu -i) && sudo sleep $chosen && sudo poweroff ;;
   Offgopoweroff) sudo kill -9 $(pgrep -f off.sh) ;;
   Refbar) sudo kill -9 $(pgrep -f bar.sh) && sudo kill -9 $(pgrep -f 20min.sh) && sudo sh ARCH-files/bar.sh & ;;
+esac
+
+
+case "$asd" in
+  nope) ;;
+esac
+
+case "$zxc" in
+  nope) ;;
 esac

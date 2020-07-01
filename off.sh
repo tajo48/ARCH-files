@@ -16,8 +16,3 @@ case "$chosen" in
   Offgopoweroff) sudo kill -9 $(pgrep -f off.sh) ;;
   Refbar) sudo kill -9 $(pgrep -f bar.sh) && sudo kill -9 $(pgrep -f 20min.sh) && sudo sh ARCH-files/bar.sh & ;;
 esac
-
-
-#Pacman) update=$(sudo pacman -Qu | awk '{print $1}' ) && install=$(sudo pacman -Ss | grep "^[A-Za-z]" | tr "/" " " | awk '{ print $2}' ) && chosen=$(echo -e $install" Programy: "$update | tr " " "\n" | dmenu -i ) && sudo pacman -S --noconfirm $chosen ;;
-
-#echo -e $pac | sed 's/ /\n*/g'

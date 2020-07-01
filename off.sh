@@ -26,5 +26,3 @@ case "$chosen" in
   Disablessh) sudo systemctl disable sshd;;
   Enablessh) sudo systemctl enalbe sshd;;
 esac
-
-#options="Poweroff\nXstop\nReboot\nUpdate\nPacman\nUinstall\nRefbar\nGopoweroff\nOffgopoweroff" && chosen=$(echo -e "$options" | dmenu -i);;

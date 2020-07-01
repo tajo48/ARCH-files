@@ -1,12 +1,12 @@
 #!/bin/bash
 #[ $(echo -e "No\nYes" | dmenu -i) == "Yes" ] && echo "xd
 
-options="Poweroff\n"
+options="Poweroff\nPacman"
 chosen=$(echo -e "$options" | dmenu -i)
 
 case "$chosen" in
   Poweroff) options="Poweroff\nXstop\nReboot\nRefbar\nGopoweroff\nOffgopoweroff" && chosen=$(echo -e "$options" | dmenu -i);;
-  Poweroff) options="Update\nPacman\nUinstall" && chosen=$(echo -e "$options" | dmenu -i);;
+  Pacman) options="Update\nPacman\nUinstall" && chosen=$(echo -e "$options" | dmenu -i);;
 esac
 
 

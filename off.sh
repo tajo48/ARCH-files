@@ -1,7 +1,7 @@
 #!/bin/bash
 #[ $(echo -e "No\nYes" | dmenu -i) == "Yes" ] && echo "xd
 
-options="Poweroff\nXstop\nReboot\nUpdate\nPacman\nRefbar\nGopoweroff\nOffgopoweroff"
+options="Poweroff\nXstop\nReboot\nUpdate\nPacman\nUinstall\nRefbar\nGopoweroff\nOffgopoweroff"
 
 chosen=$(echo -e "$options" | dmenu -i)
 

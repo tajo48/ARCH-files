@@ -1,11 +1,14 @@
 #!/bin/bash
 #[ $(echo -e "No\nYes" | dmenu -i) == "Yes" ] && echo "xd
 
-options="Poweroff\nXstop\nReboot\nUpdate\nPacman\nUinstall\nRefbar\nGopoweroff\nOffgopoweroff"
-
+options="Poweroff\n"
 chosen=$(echo -e "$options" | dmenu -i)
-asd=nope
-zxc=nope
+
+case "$chosen" in
+  Poweroff) options="Poweroff\nXstop\nReboot\nRefbar\nGopoweroff\nOffgopoweroff" && chosen=$(echo -e "$options" | dmenu -i);;
+  Poweroff) options="Update\nPacman\nUinstall" && chosen=$(echo -e "$options" | dmenu -i);;
+esac
+
 
 case "$chosen" in
   Xstop) sudo kill -9 $(pgrep -f bar.sh) && sudo kill -9 $(pgrep -f 20min.sh) &&  sudo killall dwm;;
@@ -19,11 +22,4 @@ case "$chosen" in
   Refbar) sudo kill -9 $(pgrep -f bar.sh) && sudo kill -9 $(pgrep -f 20min.sh) && sudo sh ARCH-files/bar.sh & ;;
 esac
 
-
-case "$asd" in
-  nope) ;;
-esac
-
-case "$zxc" in
-  nope) ;;
-esac
+#options="Poweroff\nXstop\nReboot\nUpdate\nPacman\nUinstall\nRefbar\nGopoweroff\nOffgopoweroff" && chosen=$(echo -e "$options" | dmenu -i);;

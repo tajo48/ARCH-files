@@ -21,6 +21,6 @@ case "$chosen" in
   Killssh) sudo systemctl stop sshd;;
   Startssh) sudo systemctl start sshd;;
   Disablessh) sudo systemctl disable sshd;;
-  Enablessh) sudo systemctl enalbe sshd;;
+  Enablessh) sudo systemctl enable sshd;;
   Upgradefiles) sudo sh ARCH-files/upgradefiles.sh;;
 esac

@@ -1,11 +1,11 @@
 #!/bin/bash
 #[ $(echo -e "No\nYes" | dmenu -i) == "Yes" ] && echo "xd
 
-options="Poweroff\nPacman\nSsh"
+options="Operation\nPacman\nSsh"
 chosen=$(echo -e "$options" | dmenu -i)
 
 case "$chosen" in
-  Poweroff) options="Poweroff\nXstop\nRefbar" && chosen=$(echo -e "$options" | dmenu -i);;
+  Operation) options="Poweroff\nXstop\nRefbar" && chosen=$(echo -e "$options" | dmenu -i);;
   Pacman) options="Update\nPacman\nUinstall" && chosen=$(echo -e "$options" | dmenu -i);;
   Ssh) options="Killssh\nStartssh\nDisablessh\nEnablessh" && chosen=$(echo -e "$options" | dmenu -i);;
 esac

@@ -1,10 +1,4 @@
 #!/bin/bash
 
-
-
-#if test -n $(pgrep -f ssend.sh);
-#then
-sudo kill -9 $(pgrep -f ssend.sh)
-#fi
-
-sh /home/tajo48/ARCH-files/ssend.sh
+import /home/tajo48/screen.png
+xclip -selection clipboard -t image/png /home/tajo48/screen.png

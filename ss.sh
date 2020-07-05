@@ -7,4 +7,4 @@ then
 sudo kill -9 $(pgrep -f ssend.sh)
 fi
 
-sh /home/tajo48/ARCH-files/ssemd.sh
+sh /home/tajo48/ARCH-files/ssend.sh

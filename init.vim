@@ -37,8 +37,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'alvan/vim-closetag'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'vimwiki/vimwiki'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'tpope/vim-commentary'
 
+"table mode 
+let g:table_mode_delete_row_map = "<leader>tdr"
 
+"vim viki
+let g:vimwiki_list = [{'path': '~/.local/share/vimwiki/', 'auto_diary_index': 1}]
 
 "leader
 let mapleader = " "

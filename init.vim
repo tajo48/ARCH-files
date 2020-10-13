@@ -37,7 +37,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'alvan/vim-closetag'
-"Plug 'mattn/emmet-vim'
 
 
 

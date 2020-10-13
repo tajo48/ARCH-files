@@ -38,15 +38,16 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-commentary'
+Plug 'tomasr/molokai'
+call plug#end()
 
 
 
 
 
 
-
-
-
+colorscheme molokai
+let g:molokai_original = 1
 
 
 
@@ -245,4 +246,4 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
 
-call plug#end()
+

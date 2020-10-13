@@ -9,15 +9,17 @@ endif
 
 
 
-if empty(glob('~/.config/coc/extensions/node_modules/coc-cord/package.json'))
-  autocmd VimEnter * CocInstall coc-cord
-endif
-
-
-
-if empty(glob('~/.config/coc/extensions/node_modules/coc-prettier/package.json'))
-  autocmd VimEnter * CocInstall coc-prettier
-endif
+let g:coc_global_extensions = [
+	\ 'coc-snippets',
+	\ 'coc-pairs',
+	\ 'coc-prettier',
+	\ 'coc-html',
+	\ 'coc-css',
+	\ 'coc-json',
+	\ 'coc-sql',
+	\ 'coc-rome',
+	\ 'coc-cord'
+	\ ]
 
 
 

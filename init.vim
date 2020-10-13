@@ -37,9 +37,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'alvan/vim-closetag'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'vimwiki/vimwiki'
-Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-commentary'
 
 
@@ -59,11 +56,6 @@ Plug 'tpope/vim-commentary'
 
 
 
-"table mode 
-let g:table_mode_delete_row_map = "<leader>tdr"
-
-"vim viki
-let g:vimwiki_list = [{'path': '~/.local/share/vimwiki/', 'auto_diary_index': 1}]
 
 "leader
 let mapleader = " "
@@ -93,24 +85,15 @@ map <leader><leader>k <Plug>(easymotion-overwin-line)
 map <leader><leader>w <Plug>(easymotion-overwin-w)
 
 
-
-
-
-
 "nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
 
 
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-
-
-
 
 
 "COC config

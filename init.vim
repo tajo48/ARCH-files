@@ -60,7 +60,6 @@ noremap <left> <nop>
 noremap <right> <nop>
 
 
-let g:user_emmet_mode='n'    "enable all function in all mode.
 
 
 "easy motion
@@ -71,10 +70,6 @@ map <leader><leader>w <Plug>(easymotion-overwin-w)
 
 
 
-
-
-
-let g:user_emmet_leader_key='<C-Y>'
 
 
 

@@ -27,12 +27,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-
 Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasiser/vim-code-dark'
@@ -52,27 +47,6 @@ Plug 'tpope/vim-commentary'
 
 
 
-
-
-Plug 'raghur/fruzzy', {'do': { -> fruzzy#install()}}
-
-" optional - but recommended - see below
-let g:fruzzy#usenative = 1
-
-" When there's no input, fruzzy can sort entries based on how similar they are to the current buffer
-" For ex: if you're on /path/to/somefile.h, then on opening denite, /path/to/somefile.cpp
-" would appear on the top of the list.
-" Useful if you're bouncing a lot between similar files.
-" To turn off this behavior, set the variable below  to 0
-
-let g:fruzzy#sortonempty = 1 " default value
-
-" tell denite to use this matcher by default for all sources
-call denite#custom#source('_', 'matchers', ['matcher/fruzzy'])
-
-" tell CtrlP to use this matcher
-let g:ctrlp_match_func = {'match': 'fruzzy#ctrlp#matcher'}
-let g:ctrlp_match_current_file = 1 " to include current file in matches
 
 
 
@@ -127,6 +101,8 @@ map <leader><leader>w <Plug>(easymotion-overwin-w)
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
 
 " Formatting selected code.

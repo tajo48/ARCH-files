@@ -14,6 +14,7 @@ function git_branch_name()
 
 # Enable substitution in the prompt.
 setopt prompt_subst
+alias v="nvim"
 
 # Config for prompt. PS1 synonym.
 prompt='%2/ $(git_branch_name) > '

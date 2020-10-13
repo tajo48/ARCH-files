@@ -22,7 +22,7 @@ setxkbmap -layout 'pl'
 xset r rate 300 50
 xmodmap -e 'keycode 66 = Escape'
 xmodmap -e 'keycode 9 = Caps_Lock'
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+xmodmap -e 'clear Lock' -e 'keycode 66 = Escape'
 
 usedmem="$(vmstat -s | grep "used memory" | awk '{print $1}' )"
 allmem="$(vmstat -s | grep "total memory" | awk '{print $1}' )"

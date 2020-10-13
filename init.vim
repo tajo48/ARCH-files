@@ -36,7 +36,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'alvan/vim-closetag'
+"Plug 'mattn/emmet-vim'
 
+
+
+"leader
+let mapleader = " "
 
 "" Vmap for maintain Visual Mode after shifting > and < 
 vmap < <gv
@@ -54,44 +60,21 @@ noremap <left> <nop>
 noremap <right> <nop>
 
 
+let g:user_emmet_mode='n'    "enable all function in all mode.
+
+
+"easy motion
+map <leader><leader>f <Plug>(easymotion-overwin-f)
+map <leader><leader>j <Plug>(easymotion-overwin-line)
+map <leader><leader>k <Plug>(easymotion-overwin-line)
+map <leader><leader>w <Plug>(easymotion-overwin-w)
 
 
 
 
 
 
-
-
-
-
-
-
-
-"easy motion 
-" <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
-
-" s{char}{char} to move to {char}{char}
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
-
-
-
-
-
-
-
-
-
-
+let g:user_emmet_leader_key='<C-Y>'
 
 
 
@@ -102,21 +85,14 @@ map <C-n> :NERDTreeToggle<CR>
 
 
 " Formatting selected code.
-"xmap <leader>f  <Plug>(coc-format-selected)
-"nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 
 
 
 
 "COC config
-
-"prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-map <C-f> :Prettier<CR>
-
-
-
 
 " TextEdit might fail if hidden is not set.
 set hidden

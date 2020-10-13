@@ -38,7 +38,7 @@ Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-commentary'
-
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 
 

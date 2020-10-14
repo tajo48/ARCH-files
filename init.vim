@@ -39,6 +39,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-commentary'
 Plug 'tomasr/molokai'
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
 
@@ -50,7 +51,12 @@ colorscheme molokai
 let g:molokai_original = 1
 
 
+" Colorizer
+:let g:colorizer_auto_color = 1
+:let g:colorizer_colornames = 1
 
+" mappings
+map <C-c> :ColorToggle<CR>
 
 
 

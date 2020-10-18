@@ -16,6 +16,6 @@ function git_branch_name()
 setopt prompt_subst
 alias v="nvim"
 alias gita="git add -A && git commit -m 'update' && git push"
-
+alias wifi="sudo wifi-menu"
 # Config for prompt. PS1 synonym.
 prompt='%2/ $(git_branch_name) > '

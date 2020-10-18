@@ -16,6 +16,9 @@ function git_branch_name()
 setopt prompt_subst
 alias v="nvim"
 alias gita="git add -A && git commit -m 'update' && git push"
+
+alias gitstore="git config --global user.email 'tajo161626@gmail.com' & git config --global user.name 'tajo48'"
+alias gitset="git config --global credential.helper store"
 alias wifi="sudo wifi-menu"
 # Config for prompt. PS1 synonym.
 prompt='%2/ $(git_branch_name) > '

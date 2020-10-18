@@ -58,8 +58,8 @@ let g:molokai_original = 1
 " mappings
 map <C-c> :ColorToggle<CR>
 
-map <leader>c :Bracey<CR>
-map <leader>d :BraceyStop<CR>
+map <C-f> :Bracey<CR>
+map <C-d> :BraceyStop<CR>
 
 
 

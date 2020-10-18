@@ -25,7 +25,7 @@ let g:coc_global_extensions = [
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'turbio/bracey.vim'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'

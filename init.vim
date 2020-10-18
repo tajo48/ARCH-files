@@ -25,7 +25,7 @@ let g:coc_global_extensions = [
 
 call plug#begin('~/.config/nvim/plugged')
 
-
+Plug 'turbio/bracey.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -58,7 +58,8 @@ let g:molokai_original = 1
 " mappings
 map <C-c> :ColorToggle<CR>
 
-
+map <leader>s :Bracey<CR>
+map <leader>d :BraceyStop<CR>
 
 
 

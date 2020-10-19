@@ -24,7 +24,8 @@ let g:coc_global_extensions = [
 
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'mattn/vim-fz'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'

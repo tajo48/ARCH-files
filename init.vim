@@ -88,8 +88,8 @@ map <C-l> :tabnew<CR>
 map <C-k> :+tabnext<CR> 
 map <C-j> :-tabnext<CR> 
 map <C-h> :tabclose<CR> 
-map <C-p> :Fz<CR>
-
+map <C-p> :Files<CR>
+map <C-i> :Lines<CR>
 
 "easy motion
 map <leader><leader>f <Plug>(easymotion-overwin-f)

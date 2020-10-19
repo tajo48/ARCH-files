@@ -82,6 +82,11 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+"tabs
+map <C-l> :tabnew<CR> 
+map <C-k> :-tabnext<CR> 
+map <C-j> :+tabnext<CR> 
+map <C-h> :tabclose<CR> 
 
 
 

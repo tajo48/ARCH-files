@@ -24,7 +24,7 @@ let g:coc_global_extensions = [
 
 
 call plug#begin('~/.config/nvim/plugged')
-
+Plug 'mattn/vim-fz'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
@@ -82,12 +82,12 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-"tabs
+"tabs and fuzzy
 map <C-l> :tabnew<CR> 
-map <C-k> :-tabnext<CR> 
-map <C-j> :+tabnext<CR> 
+map <C-k> :+tabnext<CR> 
+map <C-j> :-tabnext<CR> 
 map <C-h> :tabclose<CR> 
-
+map <C-p> :Fz<CR>
 
 
 "easy motion

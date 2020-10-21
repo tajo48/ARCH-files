@@ -22,15 +22,19 @@ setxkbmap -layout 'pl'
 xset r rate 300 50
 setxkbmap -option caps:swapescape
 
+
+weather="$(curl https://wttr.in/?format=3)"
+
+
 usedmem="$(vmstat -s | grep "used memory" | awk '{print $1}' )"
 allmem="$(vmstat -s | grep "total memory" | awk '{print $1}' )"
 mem="$( calc "$(echo $usedmem)" / "$(echo $allmem)" *100 | tr "~" " " | tr "." " " | awk '{print $1}' )"
 
 
-status=$mem"%"$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
+status="|"$mem"%"$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
+status="$(echo $status | tr "/n" " ")"
 
 
-
-   xsetroot -name "$(echo $status | tr "/n" " ")"
-    sleep 10s
+xsetroot -name "$(echo $weather$status)"
+sleep 10s
 done

@@ -1,9 +1,10 @@
 #!/bin/bash
 cd /home/tajo48
-sudo rm -r ARCH-files ARCH-builds
+sudo rm -r ARCH-files ARCH-builds ARCH-linux-install-script
 git clone https://github.com/tajo48/ARCH-files.git
-git clone https://github.com/tajo48/ARCH-builds.git
 
+git clone https://github.com/tajo48/ARCH-builds.git
+git clone https://github.com/tajo48/ARCH-linux-install-script.git
 echo done | dmenu
 
 

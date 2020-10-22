@@ -22,3 +22,4 @@ alias gitstore="git config --global credential.helper store"
 prompt='%2/ $(git_branch_name) > '
 
 alias arch-install="cd ~/ && curl -o install.sh https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/bios/install.sh && sudo sh install.sh"
+alias arch-install-pen="cd ~/ && curl -o install.sh https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/bios/install.sh && sudo sh install.sh pen"

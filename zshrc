@@ -1,5 +1,4 @@
 # ~/.zshrc
-bindkey -v
 # Find and set branch name var if in git repository.
 function git_branch_name()
 {

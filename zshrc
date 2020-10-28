@@ -13,8 +13,10 @@ function git_branch_name()
 
 # Enable substitution in the prompt.
 setopt prompt_subst
-alias v="nvim"
 alias x="startx"
+alias v="nvim"
+alias p="ping duckduckgo.com"
+alias u="sh ARCH-files/upgradefiles.sh"
 alias gita="git add -A && git commit -m 'update' && git push"
 alias gitset="git config --global user.email 'tajo161626@gmail.com' && git config --global user.name 'tajo48'"
 alias gitstore="git config --global credential.helper store"

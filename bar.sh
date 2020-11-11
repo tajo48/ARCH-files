@@ -23,7 +23,7 @@ xset r rate 300 50
 setxkbmap -option caps:swapescape
 
 
-weather="$(curl "https://wttr.in/?format=2" | awk '{print $2}{print $3}' | sed 's/^..//' | tr "\n" " ")"
+weather="$(cat ~/ARCH-files/weather.txt | awk '{print $2}{print $3}' | sed 's/^..//' | tr "\n" " ")"
 
 
 usedmem="$(vmstat -s | grep "used memory" | awk '{print $1}' )"

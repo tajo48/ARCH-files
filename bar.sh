@@ -23,7 +23,7 @@ xset r rate 300 50
 setxkbmap -option caps:swapescape
 
 
-weather="$(cat ~/ARCH-files/weather.txt  | awk '{print $2}{print $3}' | sed 's/^..//' | tr "\n" " ")"
+weather="$(cat /home/tajo48/weather  | awk '{print $2}{print $3}' | sed 's/^..//' | tr "\n" " ")"
 
 
 usedmem="$(vmstat -s | grep "used memory" | awk '{print $1}' )"

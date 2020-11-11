@@ -7,6 +7,8 @@ git clone https://github.com/tajo48/ARCH-builds.git
 git clone https://github.com/tajo48/ARCH-linux-install-script.git
 echo done | dmenu
 
+rm -rf ~/.xinitrc
+cp ~/ARCH-files/xinitrc ~/.xinitrc
 
 rm -rf ~/.config/nvim ~/.zshrc ~/.config/coc
 cp ~/ARCH-files/zshrc ~/.zshrc

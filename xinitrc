@@ -12,6 +12,6 @@ sudo make clean install
 sudo sh /home/tajo48/ARCH-files/bar.sh &
 cd /home/tajo48
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
-ssh-agent dwm
+#ssh-agent dwm
 exec dwm
 clipmenud

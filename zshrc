@@ -19,6 +19,7 @@ alias x="startx"
 alias p="ping google.com"
 alias u="sh ARCH-files/upgradefiles.sh"
 alias gita="git add -A && git commit -m 'update' && git push"
+alias pacre="sudo rm /var/lib/pacman/db.lck"
 alias gitset="git config --global user.email 'tajo161626@gmail.com' && git config --global user.name 'tajo48'"
 alias gitstore="git config --global credential.helper store"
 

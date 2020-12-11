@@ -33,8 +33,8 @@ mem="$( calc "$(echo $usedmem)" / "$(echo $allmem)" *100 | tr "~" " " | tr "." "
 
 status="|"$mem"%"$statusbat"$(date +"%F %R" )""|""$(pacman -Qu | wc -l)"" of ""$(pacman -Q | wc -l)"
 status="$(echo $status | tr "/n" " ")"
-cp="$(echo countdown to cp2077:$[$[$(date +%s)-$(date -d "2020-12-10 00:00:00" +%s)]/60] | tr "-" " ")"" |"
+#cp="$(echo countdown to cp2077:$[$[$(date +%s)-$(date -d "2020-12-10 00:00:00" +%s)]/60] | tr "-" " ")"" |"
 
-xsetroot -name "$(echo $cp$weather$status)"
+xsetroot -name "$(echo $weather$status)"
 sleep 10s
 done

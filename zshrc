@@ -22,6 +22,8 @@ alias gita="git add -A && git commit -m 'update' && git push"
 alias pacre="sudo rm /var/lib/pacman/db.lck"
 alias gitset="git config --global user.email 'tajo161626@gmail.com' && git config --global user.name 'tajo48'"
 alias gitstore="git config --global credential.helper store"
+alias BTW="neofetch"
+alias btw="neofetch"
 
 alias wifi="sudo wifi-menu"
 # Config for prompt. PS1 synonym.

@@ -18,6 +18,7 @@ alias mc="/usr/lib/jvm/java-8-openjdk/bin/java -jar Downloads/ShiginimaSE_v4400/
 alias x="startx"
 alias p="ping google.com"
 alias u="sh ARCH-files/upgradefiles.sh"
+alias suicide="poweroff"
 alias gita="git add -A && git commit -m 'update' && git push"
 alias pacre="sudo rm /var/lib/pacman/db.lck"
 alias gitset="git config --global user.email 'tajo161626@gmail.com' && git config --global user.name 'tajo48'"
